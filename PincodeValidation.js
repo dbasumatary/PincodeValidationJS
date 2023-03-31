@@ -1,4 +1,4 @@
-//UC1 - PIN has to be a 6-digit code
+//UC2 - PIN cannot contain alphabet or special characters at the beginning
 
 const pinRegex = RegExp("^[0-9]{6}$");
 
@@ -11,7 +11,7 @@ function validatePIN(pin){
 
 try{
     validatePIN("123465");   //valid
-    validatePIN("7869");  //invalid - PIN has to be 6 digits
+    validatePIN("A47869");  //invalid - PIN cannot contain alphabet
 }catch(e){
     console.error(e);
 }
